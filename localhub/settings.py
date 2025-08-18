@@ -38,9 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'communities',
     'users',
     'news',
     'events',
+    'groups',
+    'rest_framework',  # Django REST Framework for API support
 ]
 
 MIDDLEWARE = [
@@ -102,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTH_USER_MODEL = "core.User"
+AUTH_USER_MODEL = "users.User"
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
