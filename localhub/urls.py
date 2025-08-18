@@ -16,8 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from . import views
 
 urlpatterns = [
+    path("", views.home, name="home"),  # LocalHub home page
     path("admin/", admin.site.urls),
-    path("api/", include("core.urls")),  # include core app endpoints
+
+    # # API routes
+    # path("api/users/", include("users.urls")),
+    # path("api/communities/", include("communities.urls")),
+    # path("api/events/", include("events.urls")),
+    # path("api/groups/", include("groups.urls")),
+    # path("api/news/", include("news.urls")),
 ]

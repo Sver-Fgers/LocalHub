@@ -1,10 +1,10 @@
 # events/models.py
 from django.db import models
-from core.models import TimestampedModel
+from core.models import TimeStampedModel
 from users.models import User
 from communities.models import Community
 
-class Event(TimestampedModel):
+class Event(TimeStampedModel):
     title = models.CharField(max_length=255)
     description = models.TextField()
     date = models.DateTimeField()
