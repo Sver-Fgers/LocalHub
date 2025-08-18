@@ -6,6 +6,6 @@ __pycache__/
 *.py[cod]
 *.swp
 .env/
-Pipfile.lock
+.lock
 .vscode/
 .venv/
