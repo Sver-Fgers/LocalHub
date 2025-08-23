@@ -19,7 +19,7 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path("", views.home, name="home"),  # LocalHub home page
+    path("", include("core.urls")),  # LocalHub home page
     path("admin/", admin.site.urls),
 
     # # API routes

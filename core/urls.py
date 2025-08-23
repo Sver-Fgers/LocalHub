@@ -1,5 +1,8 @@
+# core/urls.py
 from django.urls import path
+from . import views
 
 urlpatterns = [
-    # For now it's empty, we’ll add endpoints later
+    path("", views.homepage, name="homepage"),
+    path("in-progress/", views.in_progress, name="in_progress"), 
 ]

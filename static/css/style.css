@@ -1,0 +1,272 @@
+/* static/css/style.css */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* All Headers */
+header {
+    text-align: center;
+    margin: 20px 0 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* localhub header */
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin-left: auto;
+    background: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* center LocalHub */
+.header-center {
+    flex: 1;
+    text-align: center;
+}
+
+/* push online status to right */
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* online status design */
+.user-status {
+    position: relative;
+    margin-right: 20px;
+}
+
+.online-status {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #00ff00; /* green for online */
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -60px; /* hidden by default */
+    width: 60px; /* thin sidebar */
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px; /* space for header */
+    justify-content: space-between;
+}
+
+/* When sidebar opens */
+.sidebar-open .sidebar {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a,
+.sidebar-bottom a {
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover,
+.sidebar-bottom a:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Sidebar bottom (settings gear) */
+.sidebar-bottom {
+    margin-bottom: 20px;
+}
+
+
+/* increase size of sidebar events icons to properly match others */
+.fa-calendar-alt {
+    font-size: 23px;
+}
+
+/* Shift EVERYTHING when sidebar opens */
+.sidebar-open #page-content {
+    margin-left: 60px; /* same as sidebar width */
+    transition: margin-left 0.3s ease;
+}
+
+
+/* hamburger menu */
+.hamburger {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+/* Homepage header */
+header .homepage-header-title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 4rem;
+    width: 100%;          /* Take full width */
+    max-width: 1200px;    /* Keep it readable */
+    margin-left: auto;
+    margin-right: auto;   /* Center the grid */
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.3); /* black with 30% transparency */
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+    position: relative;
+    transition: transform 0.2s ease;
+    height: 320px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: 2px;
+
+}
+
+.card-icon i {
+    margin-top: 50px;
+    font-size: 5rem;
+    color: #ffffff; /* green icon */
+    justify-items: center;
+}
+
+.notification {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.badge {
+    background: rgb(255, 0, 0);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 7px;
+    border-radius: 50%;
+}
+
+.card-divider {
+    
+    margin: 2.5rem auto;
+    width: 60%;
+    border: 0;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 1px;
+}
+
+.card a {
+    display: block;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.card-info {
+    font-size: 0.9rem;
+    color: #ffffff;
+    margin-top: 0.3rem;
+}
+
+/* In Progress pages*/
+.in-progress {
+    margin-top: 30px;
+    text-align: center;
+    padding: 2rem 0;
+    height: 450px;
+
+}
+
+.in-progress h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.in-progress-icon {
+    margin-top: 70px;
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.in-progress p {
+    margin-top: 1rem;
+    font-size: 1.2rem   ;
+}
+
+/* Footer */
+footer {
+
+    text-align: center;
+    padding: 3rem 0;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

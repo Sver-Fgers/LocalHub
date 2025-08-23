@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}Home - LocalHub{% endblock %}
+
+{% block header_right %}
+    <div class="user-status">
+        <span class="online-status"></span>
+    </div>
+{% endblock %}
+
+{% block content %}
+<header>
+    <h1 class="homepage-header-title">Welcome, Maddie</h1>
+</header>
+
+<div class="card-grid">
+    <!-- Card 1: Local News -->
+    <div class="card">
+        <div class="notification">
+            <span class = "badge"> 0</span>
+        </div>
+        <div class="card-icon">
+            <i class="fas fa-newspaper"></i>
+        </div>
+        <hr class="card-divider">
+        <a href="{% url 'in_progress' %}">Local News</a>
+        <p class="card-info">1 new story</p>
+    </div>
+
+    <!-- Card 2: Events -->
+    <div class="card">        
+        <div class="notification">
+            <span class = "badge"> 0</span>
+        </div>
+        <div class="card-icon">
+            <i class="fas fa-calendar-alt"></i>
+        </div>
+        <hr class="card-divider">
+        <a href="{% url 'in_progress' %}">Events</a>
+        <p class="card-info">1 event</p>
+    </div>
+
+    <!-- Card 3: Groups -->
+    <div class="card">
+        <div class="notification">
+            <span class = "badge"> 0</span>
+        </div>        
+        <div class="card-icon">
+            <i class="fas fa-users"></i>
+        </div>
+        <hr class="card-divider">
+        <a href="{% url 'in_progress' %}">Groups</a>
+        <p class="card-info">Last update: 10 mins ago</p>
+    </div>
+
+    <!-- Card 4: Vigilante -->
+    <div class="card">
+        <div class="notification">
+            <span class = "badge"> 0</span>
+        </div>
+        <div class="card-icon">
+            <i class="fas fa-shield-alt"></i>
+        </div>
+        <hr class="card-divider">
+        <a href="{% url 'in_progress' %}">Vigilante</a>
+        <p class="card-info">Find help or report crime</p>
+    </div>
+
+    <!-- Card 5: Volunteers -->
+    <div class="card">
+        <div class="notification">
+            <span class = "badge"> 0</span>
+        </div>
+        <div class="card-icon">
+            <i class="fas fa-hand-holding-heart"></i>
+        </div>
+        <hr class="card-divider">
+        <a href="{% url 'in_progress' %}">Volunteers</a>
+        <p class="card-info">Lend a hand</p>
+    </div>
+</div>
+{% endblock %}

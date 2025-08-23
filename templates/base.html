@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}LocalHub{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<script src="{% static 'javascript/sidebar.js' %}"></script>
+
+<body>
+
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar">
+        <ul>
+            <li><a href="{% url 'homepage' %}"><i class="fas fa-home"></i></a></li>
+            <li><a href="{% url 'in_progress' %}"><i class="fas fa-newspaper"></i></a></li>
+            <li><a href="{% url 'in_progress' %}"><i class="fas fa-calendar-alt"></i></a></li>
+            <li><a href="{% url 'in_progress' %}"><i class="fas fa-users"></i></a></li>
+            <li><a href="{% url 'in_progress' %}"><i class="fas fa-shield-alt"></i></a></li>
+            <li><a href="{% url 'in_progress' %}"><i class="fas fa-hand-holding-heart"></i></a></li>
+        </ul>
+
+        <div class="sidebar-bottom">
+            <a href="{% url 'in_progress' %}"><i class="fas fa-cog"></i></a>
+        </div>
+    </nav>
+
+    <!-- Page Content Wrapper -->
+    <div id="page-content" class="page-content">
+        <header class="main-header">
+            <div class="header-left">
+                <!-- Hamburger Icon -->
+                <button id="hamburger" class="hamburger">&#9776;</button>
+            </div>
+
+            <div class="header-center">
+                <h1>LocalHub</h1>
+            </div>
+
+            <div class="header-right">
+                {% block header_right %}{% endblock %}
+            </div>
+        </header>
+
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <footer>
+            <p>&copy; 2025 LocalHub</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+
