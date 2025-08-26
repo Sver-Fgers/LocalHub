@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}News - LocalHub{% endblock %}
+
+{% block content %}
+<section class="news-page">
+
+    <!-- Search bar -->
+    <div class="news-search">
+        <input type="text" placeholder="Search news" class="search-input">
+        <button class="search-btn"><i class="fas fa-search"></i></button>
+        <button class="filter-btn"><i class="fas fa-filter"></i></button>
+    </div>
+
+    <!-- Main news -->
+    <h2 class="news-header">Latest</h2>
+    <article class="main-news">
+        <div class="news-image">
+            <img src="{% static 'images/sample-news.jpg' %}" alt="Main News">
+            <div class="news-icons">
+                <button><i class="fas fa-bookmark"></i></button>
+                <button><i class="fas fa-share-alt"></i></button>
+            </div>
+        </div>
+        <div class="news-info">
+            <a href="{% url 'in_progress' %}" class="news-title-latest">
+                <h2>Main News Title</h2>
+            </a>
+            <p class="news-desc">This is a short description of the main news article.fadfdfdafdfafdafdsafdasfdfdafdafdfafdfdafafdsfasfdasfasfdsfadsfdasfdafdfgvafdfafdfasfdasfadsfadfdfdafdafdf</p>
+            <small class="news-time">2 hours ago</small>
+        </div>
+    </article>
+
+    <!-- Older section -->
+    <h2 class="news-header">Older</h2>
+    <div class="older-news-grid">
+        {% for i in "123456" %}
+        <article class="older-news-card">
+            <div class="news-image">
+                <img src="{% static 'images/sample-news.jpg' %}" alt="Older News">
+                <div class="news-icons">
+                    <button><i class="fas fa-bookmark"></i></button>
+                    <button><i class="fas fa-share-alt"></i></button>
+                </div>
+            </div>
+            
+            <div class="news-info">
+               <a href="{% url 'in_progress'%}" class="news-title-older">
+                    <h2>older news title</h2>
+                </a>
+                <p class="news-desc">Short description goes here.</p>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+
+</section>
+{% endblock %}

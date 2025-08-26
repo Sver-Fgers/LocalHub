@@ -6,3 +6,6 @@ def homepage(request):
 
 def in_progress(request):
     return render(request, "in_progress.html")
+
+def news_list(request):
+    return render(request, "news_list.html")
