@@ -1,11 +1,6 @@
-{% extends "base.html" %}
+{% extends "sidebar_menubar.html" %}
 {% block title %}Home - LocalHub{% endblock %}
 
-{% block header_right %}
-    <div class="user-status">
-        <span class="online-status"></span>
-    </div>
-{% endblock %}
 
 {% block content %}
 <header>
@@ -48,7 +43,7 @@
             <i class="fas fa-users"></i>
         </div>
         <hr class="card-divider">
-        <a href="{% url 'in_progress' %}">Groups</a>
+        <a href="{% url 'in_progress' %}">Group Chat</a>
         <p class="card-info">Last update: 10 mins ago</p>
     </div>
 

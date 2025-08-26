@@ -28,7 +28,7 @@ header h1 {
 }
 
 /* localhub header */
-.main-header {
+/* .main-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,22 +36,22 @@ header h1 {
     margin-left: auto;
     background: none;
     color: rgba(0, 0, 0, 0.6);
-}
+} */
 
 /* center LocalHub */
-.header-center {
+/* .header-center {
     flex: 1;
     text-align: center;
-}
+} */
 
 /* push online status to right */
-.header-right {
+/* .header-right {
     display: flex;
     align-items: center;
-}
+} */
 
 /* online status design */
-.user-status {
+/* .user-status {
     position: relative;
     margin-right: 20px;
 }
@@ -60,10 +60,10 @@ header h1 {
     display: inline-block;
     width: 15px;
     height: 15px;
-    background: #00ff00; /* green for online */
+    background: #00ff00;
     border-radius: 50%;
     border: 2px solid white;
-}
+}  */
 
 
 /* Sidebar */

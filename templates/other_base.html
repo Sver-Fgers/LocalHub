@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}LocalHub{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+
+
+    <script src="https://kit.fontawesome.com/c7f45e44d5.js" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+</head>
+
+    <script src="{% static 'javascript/sidebar.js' %}"></script>
+
+<body>
+
+
+    <!-- Sidebar -->
+    <nav id="sidebar" class="sidebar">
+        <ul>
+            <li><a href="{% url 'index' %}"><i class="fas fa-home"></i></a></li>
+            <li><a href="{% url 'news_list' %}"><i class="fas fa-newspaper"></i></a></li>
+            <li><a href="{% url 'in_progress' %}"><i class="fas fa-calendar-alt"></i></a></li>
+            <li><a href="{% url 'in_progress' %}"><i class="fas fa-users"></i></a></li>
+            <li><a href="{% url 'in_progress' %}"><i class="fas fa-shield-alt"></i></a></li>
+            <li><a href="{% url 'in_progress' %}"><i class="fas fa-hand-holding-heart"></i></a></li>
+        </ul>
+
+        <div class="sidebar-bottom">
+            <a href="{% url 'in_progress' %}"><i class="fas fa-cog"></i></a>
+        </div>
+    </nav>
+
+    <!-- Page Content Wrapper -->
+    <div id="page-content" class="page-content">
+        <header class="main-header">
+            <div class="header-left"></div>
+
+            <div class="header-center">
+                <h1>LocalHub</h1>
+            </div>
+
+            <div class="header-right">
+                {% block header_right %}{% endblock %}
+            </div>
+        </header>
+
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <footer>
+            <p>&copy; 2025 LocalHub</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+</body>
+</html>
+
+
+  

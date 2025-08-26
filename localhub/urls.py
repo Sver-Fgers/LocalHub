@@ -19,9 +19,14 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path("", include("core.urls")),  # LocalHub home page
+    # path("", include("core.urls")),  # LocalHub home page
+    path("", include("landing.urls")),
     path("admin/", admin.site.urls),
+    path('accounts/', include('allauth.urls')),
 
+    #path("home", views.homepage, name="homepage"),
+    path("in-progress/", views.in_progress, name="in_progress"), 
+    path("news/", views.news_list, name="news_list"),
     # # API routes
     # path("api/users/", include("users.urls")),
     # path("api/communities/", include("communities.urls")),
@@ -29,3 +34,4 @@ urlpatterns = [
     # path("api/groups/", include("groups.urls")),
     # path("api/news/", include("news.urls")),
 ]
+
