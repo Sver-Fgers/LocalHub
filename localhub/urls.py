@@ -23,10 +23,13 @@ urlpatterns = [
     path("", include("landing.urls")),
     path("admin/", admin.site.urls),
     path('accounts/', include('allauth.urls')),
+    # group chat
+    path("chat/", include("group_chat.urls")),
 
-    #path("home", views.homepage, name="homepage"),
+    path("home/", views.homepage, name="homepage"),
     path("in-progress/", views.in_progress, name="in_progress"), 
     path("news/", views.news_list, name="news_list"),
+    
     # # API routes
     # path("api/users/", include("users.urls")),
     # path("api/communities/", include("communities.urls")),
