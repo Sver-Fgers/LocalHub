@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row justify-content-center mt-3">
         <div class="col-md-5 col-sm-12 border-bottom">
-            <h5>Add a Post!</h5>
+            <h5>ChatHub <i class="fa fa-comment"></i></h5>
         </div>
     </div>
 
@@ -23,9 +23,10 @@
 
     {% for post in post_list %}
     <div class="row justify-content-center mt-3">
-        <div class="col-md-5 col-sm-12 border-bottom">
+        <div class="col-md-5 col-sm-12 border-bottom position-relative">
             <p><strong>{{ post.author }}</strong> {{ post.created_on }}</p>
             <p>{{ post.body }}</p>
+            <a href="{% url 'chat:post-detail' post.pk %}" class="stretched-link"></a>
         </div>
     </div>
     {% endfor %}
