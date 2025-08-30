@@ -92,7 +92,7 @@ LocalHub is a Django-powered platform designed to connect members of local commu
 Open http://localhost:8000 in your browser.
 
 
-🧩 Extending LocalHub
+#### 🧩 Extending LocalHub
 I plan to complete the other apps for more community features.
 Integrate REST APIs for mobile or third-party access.
 Customize templates for branding and UX.
