@@ -6,10 +6,10 @@
             <div class = "col-md-10 col-sm-12 text-center">
                 <h1 class = "display-2">Connect with your community!</h1>
                 <p class = "mt-3 lead">Join LocalHub to collaborate with members of your community. Join events, network with your friends and be a functional member of the society.</p>
-                <div class="d-flex justify-content-center mt-5">
-                    <a href="{% url 'account_login' %}" class="btn btn-light mr-2">Login</a>
+                <div class="d-flex flex-column flex-sm-row justify-content-center mt-5">
+                    <a href="{% url 'account_login' %}" class="btn btn-light me-sm-2 mb-2 mb-sm-0">Login</a>
                     <a href="{% url 'in_progress' %}" class="btn btn-dark">Learn how it works</a>
-                </div>
+                </div>                
             </div>
         </div>
 {% endblock content %}

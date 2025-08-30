@@ -1,9 +1,9 @@
-{% extends "sidebar_menubar.html" %}
+{% extends "landing/base.html" %}
 {% block title %}Home - LocalHub{% endblock %}
 
 
 {% block content %}
-{% include "landing/navbar.html" %}
+<!-- {% include "landing/navbar.html" %} -->
 <header>
     <h1 class="homepage-header-title">Welcome, {{ user.username }}</h1>
 </header>
@@ -12,7 +12,7 @@
     <!-- Card 1: Local News -->
     <div class="card">
         <div class="notification">
-            <span class = "badge"> 0</span>
+            <span class = "badge"></span>
         </div>
         <div class="card-icon">
             <i class="fas fa-newspaper"></i>
@@ -25,7 +25,7 @@
     <!-- Card 2: Events -->
     <div class="card">        
         <div class="notification">
-            <span class = "badge"> 0</span>
+            <span class = "badge"></span>
         </div>
         <div class="card-icon">
             <i class="fas fa-calendar-alt"></i>
@@ -38,20 +38,20 @@
     <!-- Card 3: Groups -->
     <div class="card">
         <div class="notification">
-            <span class = "badge"> 0</span>
+            <span class = "badge"></span>
         </div>        
         <div class="card-icon">
             <i class="fas fa-comments"></i>
         </div>
         <hr class="card-divider">
-        <a href="{% url 'chat:post-list' %}">Group Chat</a>
+        <a href="{% url 'chat:post-list' %}">Chat</a>
         <p class="card-info">Connect with your Friends</p>
     </div>
 
     <!-- Card 4: Vigilante -->
     <div class="card">
         <div class="notification">
-            <span class = "badge"> 0</span>
+            <span class = "badge"></span>
         </div>
         <div class="card-icon">
             <i class="fas fa-shield-alt"></i>
@@ -64,7 +64,7 @@
     <!-- Card 5: Volunteers -->
     <div class="card">
         <div class="notification">
-            <span class = "badge"> 0</span>
+            <span class = "badge"></span>
         </div>
         <div class="card-icon">
             <i class="fas fa-hand-holding-heart"></i>
