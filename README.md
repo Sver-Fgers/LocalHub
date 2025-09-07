@@ -21,7 +21,7 @@ LocalHub is a Django-powered platform connecting members of local communities. U
 - Profiles link to each user’s chat activity.  
 
 #### **API endpoints:**  
-
+  
 | Endpoint | Method | Description |
 |----------|--------|-------------|
 | `/chat/api/posts/` | GET, POST | List all posts / create a post |
@@ -94,9 +94,9 @@ LocalHub is a Django-powered platform connecting members of local communities. U
    ```
 
 4. Run the development server:
-```sh
-   python manage.py runserver
-```
+   ```sh
+      python manage.py runserver
+   ```
 
 5. Access the app:
 Open http://localhost:8000 in your browser.
@@ -104,7 +104,7 @@ Open http://localhost:8000 in your browser.
 ## 🎯 Usage
 
 ### Frontend Flow
-- Register or login.
+- Register or login.  
 
 - Navigate to chat to create posts or comment.
 
@@ -114,23 +114,23 @@ Open http://localhost:8000 in your browser.
 
 
 ### API Flow
-see 👉️ group chat [API documentation](API_documentation.md) for full breakdown
+- see 👉️ group chat [API documentation](API_documentation.md) for full breakdown
 
 
 ## 🤝 Contributing
-Fork the repository
+- Fork the repository
 
-Create a feature branch (git checkout -b feature/feature-branch)
+- Create a feature branch (git checkout -b feature/feature-branch)
 
-Commit your changes (git commit -m 'Add features")
+- Commit your changes (git commit -m 'Add features")
 
-Push to the branch (git push origin feature/feature-branch)
+- Push to the branch (git push origin feature/feature-branch)
 
-Open a Pull Request
+- Open a Pull Request
 
-##❗️Important
-This project is for educational and demonstration purposes.
+##❗️Important Notice
+- This project is for educational and demonstration purposes.
 
-I have only implemented minimal features to satisfy the requirement for ALX backend software engineering program.
+- I have only implemented minimal features to satisfy the requirement for ALX backend software engineering program.
 
-I plan to complete the other features, polish the UI and integrate Django best practices for building applications, when I have the time.
+- I plan to complete the other features, polish the UI and integrate Django best practices for building applications, when I have the time.
