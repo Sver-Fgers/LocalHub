@@ -12,6 +12,7 @@ All endpoints require JWT authentication. Include the token in headers:
 ### User Authentication Endpoints
 1. Register a User
 `POST http://127.0.0.1:8000/chat/api/register/`
+
 Description: register new user
 
 Request Body:
@@ -25,6 +26,7 @@ Request Body:
 
 2. Login User  
 `POST http://127.0.0.1:8000/api/token/`  
+
 Description: Logs in a user and returns a JWT token for authentication.  
 
 Request Body (JSON):
@@ -46,8 +48,11 @@ Response (200 OK):
 Save the access token for subsequent requests.
 
 ### User Profile Endpoints
+
 1. Get Current User Profile
+
 GET http://127.0.0.1:8000/chat/api/profiles/<id>/
+
 Description: Retrieve a user’s profile.
 
 Response (200 OK):
@@ -64,7 +69,9 @@ Response (200 OK):
 ```
 
 2. Update Profile
+
 PUT http://127.0.0.1:8000/chat/api/profiles/<id>/
+
 Description: Update your profile (owner/admin only).
 
 Request Body (JSON):
@@ -89,8 +96,11 @@ Response (200 OK):
 ```
 
 ### Posts Endpoints
+
 1. List/Create Posts
+
 GET/POST http://127.0.0.1:8000/chat/api/posts/
+
 Description: List all posts or create a new post (authenticated users only).
 
 Create Post Request Body (JSON):
@@ -113,7 +123,9 @@ Response (POST 201 Created):
 ```
 
 2. Retrieve/Update/Delete Specific Post
+
 GET/PUT/PATCH/DELETE http://127.0.0.1:8000/chat/api/posts/<id>/
+
 Description: Manage a specific post (owner/admin only).
 
 Update Post Request Body (JSON):
@@ -137,7 +149,9 @@ Response (PUT 200 OK):
 
 ### Comments Endpoints
 1. List/Create Comments
+
 GET/POST http://127.0.0.1:8000/chat/api/comments/
+
 Description: List all comments or add a new comment to a post.
 
 Create Comment Request Body (JSON):
@@ -161,7 +175,9 @@ Response (POST 201 Created):
 ```
 
 2. Retrieve/Update/Delete Specific Comment
+
 GET/PUT/PATCH/DELETE http://127.0.0.1:8000/chat/api/comments/<id>/
+
 Description: Manage a specific comment (owner/admin only).
 
 Update Comment Request Body (JSON):

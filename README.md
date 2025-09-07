@@ -128,9 +128,9 @@ Open http://localhost:8000 in your browser.
 
 - Open a Pull Request
 
-##❗️Important Notice
-- This project is for educational and demonstration purposes.
+❗️Important Notice
+This project is for educational and demonstration purposes.
 
-- I have only implemented minimal features to satisfy the requirement for ALX backend software engineering program.
+I have only implemented minimal features to satisfy the requirement for ALX backend software engineering program.
 
-- I plan to complete the other features, polish the UI and integrate Django best practices for building applications, when I have the time.
+I plan to complete the other features, polish the UI and integrate Django best practices for building applications, when I have the time.
