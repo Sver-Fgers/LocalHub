@@ -3,10 +3,14 @@ from django.db import models
 from core.models import TimeStampedModel
 
 
-
 class User(AbstractUser, TimeStampedModel):
     is_leader = models.BooleanField(default=False)
     is_admin = models.BooleanField(default=False)
+
+    email = models.EmailField(unique=True)
+
+    USERNAME_FIELD = "username"
+    REQUIRED_FIELDS = ["email"]  
 
     @property
     def is_member(self):

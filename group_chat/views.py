@@ -7,6 +7,13 @@ from django.urls import reverse_lazy
 from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from users.models import UserProfile
 
+from rest_framework import generics
+from .serializers import PostSerializer, CommentSerializer, UserProfileSerializer
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework_simplejwt.authentication import JWTAuthentication
+from .permissions import IsOwnerOrAdmin
+
+
 # list all the posts and create new post
 class PostListView(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
@@ -149,3 +156,58 @@ class ProfileEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     def test_func(self):
         profile = self.get_object()
         return self.request.user == profile.user
+    
+
+# API Views 
+
+# posts
+class PostListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Post.objects.all().order_by('-created_on')
+    serializer_class = PostSerializer
+    permission_classes = [IsOwnerOrAdmin]
+    authentication_classes = [JWTAuthentication]
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+
+
+class PostDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+    permission_classes = [IsOwnerOrAdmin]
+    authentication_classes = [JWTAuthentication]
+
+# comments
+class CommentListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Comment.objects.all().order_by('-created_on')
+    serializer_class = CommentSerializer
+    permission_classes = [IsOwnerOrAdmin]
+    authentication_classes = [JWTAuthentication]
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+
+
+class CommentDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
+    permission_classes = [IsOwnerOrAdmin]
+    authentication_classes = [JWTAuthentication]
+
+
+# profiles
+class UserProfileListAPIView(generics.ListCreateAPIView):
+    queryset = UserProfile.objects.all()
+    serializer_class = UserProfileSerializer
+    permission_classes = [IsOwnerOrAdmin]
+    authentication_classes = [JWTAuthentication]
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
+
+class UserProfileDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = UserProfile.objects.all()
+    serializer_class = UserProfileSerializer
+    permission_classes = [IsOwnerOrAdmin]
+    authentication_classes = [JWTAuthentication]
